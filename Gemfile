@@ -13,6 +13,12 @@ gem "dry-types", "~> 1.0", ">= 1.6.1"
 gem "puma"
 gem "rake"
 
+gem "rom"
+gem "rom-sql"
+gem "pg"
+
+gem 'hanami-model'
+
 group :development do
   gem "hanami-webconsole", "~> 2.1"
   gem "guard-puma"
@@ -33,4 +39,5 @@ end
 group :test do
   gem "capybara"
   gem "rack-test"
+  gem "database_cleaner-sequel"
 end
