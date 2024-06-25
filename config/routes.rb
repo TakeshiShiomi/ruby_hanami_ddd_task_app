@@ -2,6 +2,10 @@
 
 module HanamiDddSampleTaskApp
   class Routes < Hanami::Routes
-    # Add your routes here. See https://guides.hanamirb.org/routing/overview/ for details.
+    root to: 'tasks.index'
+    get '/tasks', to: 'tasks.index'
+    get '/tasks/new', to: 'tasks.new', as: :new_task
+    post '/tasks', to: 'tasks.create'
+    patch '/tasks/:id/postpone', to: 'tasks.postpone'
   end
 end

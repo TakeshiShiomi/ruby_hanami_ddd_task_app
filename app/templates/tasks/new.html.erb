@@ -1,0 +1,19 @@
+<h1>新しいタスクを作成</h1>
+
+<form action="/tasks" method="post">
+  <div>
+    <label for="name">タスク名:</label>
+    <input type="text" id="name" name="task[name]" required>
+  </div>
+  <div>
+    <label for="due_date">期限日:</label>
+    <input type="date" id="due_date" name="task[due_date]" required>
+  </div>
+  <div>
+    <label for="task_status">ステータス:</label>
+    <input type="text" id="task_status" name="task[task_status]" required>
+  </div>
+  <div>
+    <button type="submit">作成</button>
+  </div>
+</form>

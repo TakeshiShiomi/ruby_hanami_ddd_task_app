@@ -1,0 +1,26 @@
+<h1>Tasks</h1>
+<%= link_to 'New Task', routes.path(:new_task), class: 'new-task-link' %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Due Date</th>
+      <th>Postpone Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% tasks.each do |task| %>
+      <tr>
+        <td><%= task[:name] %></td>
+        <td><%= task[:due_date] %></td>
+        <td><%= task[:postpone_count] %></td>
+        <td>
+          <%# <form action="<%= routes.postpone_task_path(task[:id]) " method="post"> %>
+            <%# <input type="hidden" name="_method" value="patch"> %>
+            <%# <button type="submit">Postpone</button> %>
+          <%# </form> %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
